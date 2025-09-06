@@ -2,34 +2,34 @@
 
 using System;
 
-class EX01
+class Program
 {
   static void Main()
   {
-    int[] arr = { 12, 35, 1, 10, 34, 1 };
-    int firstLargest = int.MinValue;
-    int secondLargest = int.MinValue;
+    int[] arr = { 10, 5, 7 };
+    int first = int.MinValue;
+    int second = int.MinValue;
 
     foreach (int num in arr)
     {
-      if (num > firstLargest)
+      if (num > first)
       {
-        secondLargest = firstLargest;
-        firstLargest = num;
+        second = first;
+        first = num;
       }
-      else if (num > secondLargest && num != firstLargest)
+      else if (num > second && num != first)
       {
-        secondLargest = num;
+        second = num;
       }
     }
 
-    if (secondLargest == int.MinValue)
+    if (second == int.MinValue)
     {
-      Console.WriteLine("There is no second largest element.");
+      Console.WriteLine("There is no second largest element");
     }
     else
     {
-      Console.WriteLine("The second largest element is: " + secondLargest);
+      Console.WriteLine("The second largest element is " + second);
     }
   }
 }
