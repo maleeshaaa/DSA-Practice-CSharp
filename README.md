@@ -7,6 +7,11 @@ This repository contains my solutions to common Data Structures and Algorithms p
 - Arrays
 - Strings
 - Linked Lists
-- Stacks & Queues
+- Stacks
+- Queues
 - Hashing
 - Recursion
+- Sorting
+- Searching
+- Trees
+- Binary Search Trees (BST)
