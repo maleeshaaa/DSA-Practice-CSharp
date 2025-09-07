@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Count vowels and consonants
+
+using System;
 
 class Program
 {
@@ -30,7 +32,7 @@ class Program
     string input = Console.ReadLine();
 
     CountVowelsAndConsonants(input, out int vowels, out int consonants);
-    
+
     Console.WriteLine($"Vowels: {vowels}, Consonants: {consonants}");
   }
 }
