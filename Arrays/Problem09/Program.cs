@@ -31,6 +31,35 @@ class Program
     return resultSet.ToArray();
   }
 
+  static int[] IntersectionWithDuplicates(int[] array1, int[] array2)
+  {
+    Array.Sort(array1);
+    Array.Sort(array2);
+
+    List<int> result = new List<int>();
+
+    int i = 0, j = 0;
+    
+    while (i < array1.Length && j < array2.Length)
+    {
+      if (array1[i] < array2[j])
+      {
+        i++;
+      }
+      else if (array1[i] > array2[j])
+      {
+        j++;
+      }
+      else
+      {
+        result.Add(array1[i]);
+        i++;
+        j++;
+      }
+    }
+    return result.ToArray();
+  }
+
   static void Main(string[] args)
   {
     int[] array1 = { 1, 2, 2, 3, 4, 4 };
@@ -41,5 +70,8 @@ class Program
 
     int[] resultManual = IntersectionWithoutDuplicates_Manual(array1, array2);
     Console.WriteLine("Intersection without duplicates (Manual): " + string.Join(", ", resultManual));
+
+    int[] resultWithDuplicates = IntersectionWithDuplicates(array1, array2);
+    Console.WriteLine("Intersection with duplicates: " + string.Join(", ", resultWithDuplicates));
   }
 }
